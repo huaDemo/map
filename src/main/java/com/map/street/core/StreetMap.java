@@ -20,8 +20,8 @@ public class StreetMap {
     private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36";
     private static final String REQUEST_URL = "https://maps.googleapis.com/maps/api/streetview";
     private static final String LOCAL_ADDRESS = "C:\\Users\\admin\\Desktop\\GPS\\GPS\\";
-    private static final String KEY = "AIzaSyCnNtqbkGPTsqwD4PuS7O7sKA-QKj2Qbxs";
-    private static final String SIGN = "HnbFKX9fS509yemnyFzBH_D1vGQ=";
+    private static final String KEY = "AIzaSyAYE4s3OOC2du6qVUPoOQ-2vqFt8QkEwPc";
+    private static final String SIGN = "P4Rlbcu1iARxnIUdahPcQ-yP3VM=";
     private static final String READ_FILE_URL = LOCAL_ADDRESS + "paris.txt";
     private static final String WRITE_FILR_URL = LOCAL_ADDRESS + "paris_sub\\";
 
@@ -46,7 +46,7 @@ public class StreetMap {
             String heading = arrs[2];
             System.out.println("经度：" + jin + " 纬度：" + wei + " 高度：" + heading);
             String writeFileUrl = WRITE_FILR_URL + jin + "_" + wei + "_" + heading + ".jpg";
-            String requestUrl = REQUEST_URL + "?size=200x200&location=" + jin + "," + wei + "&heading=" + heading + "&pitch=-004&key=" + KEY;
+            String requestUrl = REQUEST_URL + "?size=1000x1000&location=" + jin + "," + wei + "&heading=" + heading + "&pitch=-004&key=" + KEY;
             String request = this.getSignRequest(requestUrl);
             if (StringUtils.isBlank(request)) {
                 System.err.println(line + ":获取签名有误(︶︹︺)");
